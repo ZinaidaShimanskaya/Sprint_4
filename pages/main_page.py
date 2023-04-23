@@ -8,8 +8,8 @@ class MainPage(BasePage):
 
     @allure.step('Получить ответ на часто задаваемый вопрос')
     def check_answer_on_faq(self, faq_locator, answer_locator):
-        self.driver.find_element(faq_locator).click()
-        return self.driver.find_element(answer_locator).text
+        self.driver.find_element(*faq_locator).click()
+        return self.driver.find_element(*answer_locator).text
 
     @allure.step('Проскролить до кнопки Заказать')
     def scroll_to_order_button(self):

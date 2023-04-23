@@ -8,6 +8,26 @@ class Answers:
     answer_cancel_order = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои."
     answer_mkad = 'Да, обязательно. Всем самокатов! И Москве, и Московской области.'
 
+class OrderDataSet1:
+    first_name = 'аня'
+    last_name = 'коклюшкина'
+    my_adress = 'самара, ул. энергетиков, д. 15'
+    my_phone = 89524586259
+    my_comment = 'hello'
+
+class OrderDataSet2:
+    correct_first_name = 'Зина'
+    correct_last_name = 'Шиманская'
+    correct_adress = 'Калининград'
+    correct_phone = '+79999999999'
+    correct_comment = 'спасибо'
+
+class ExpectedResults:
+
+    order_confirmed = 'Заказ оформлен'
+    scooter_description_part = 'Привезём его прямо к вашей двери,'
+    button_install_text = 'Установить'
+
 
 
 
