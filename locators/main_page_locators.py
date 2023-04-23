@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators:
     locator_cookie_button = (By.CLASS_NAME, "App_CookieButton__3cvqF")
-    locator_faq = (By.XPATH, ".//div[@class='Home_SubHeader__zwi_E']")
+    locator_faq_header = (By.XPATH, ".//div[@class='Home_SubHeader__zwi_E']")
     locator_faq_how_much = (By.XPATH, ".//div[@id='accordion__heading-0']")
     locator_faq_several_scooters = (By.ID, "accordion__heading-1")
     locator_faq_calculate_time = (By.ID, "accordion__heading-2")
@@ -28,4 +28,3 @@ class MainPageLocators:
 
     locator_yandex_logo = (By.CLASS_NAME, "Header_LogoYandex__3TSOI")
     locator_download_button = (By.XPATH, ".//a[@title='Установить']")
-

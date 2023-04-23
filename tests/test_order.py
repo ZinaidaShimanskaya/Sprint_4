@@ -1,4 +1,5 @@
 import time
+import allure
 from pages.order_page import OrderPage
 from pages.main_page import MainPage
 from locators.main_page_locators import MainPageLocators
@@ -6,6 +7,7 @@ from locators.main_page_locators import MainPageLocators
 
 class TestOrder:
 
+    @allure.title('Заказ самоката по кнопке внизу страницы')
     def test_order_by_lower_button_scooter_is_successfully_ordered(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
@@ -31,6 +33,7 @@ class TestOrder:
         text_confirmation = order_page.check_successfull_order()
         assert 'Заказ оформлен' in text_confirmation
 
+    @allure.title('Заказ самоката по кнопке вверху страницы')
     def test_order_by_upper_button_scooter_is_successfully_ordered(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
@@ -56,6 +59,7 @@ class TestOrder:
 
 class TestRedirection:
 
+    @allure.title('Редирект со страницы заказа на главную Самоката')
     def test_redirect_to_main_page_user_redirected(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
@@ -81,6 +85,7 @@ class TestRedirection:
         scooter_header_description = main_page.check_scooter_header_description()
         assert 'Привезём его прямо к вашей двери,' in scooter_header_description
 
+    @allure.title('Редирект со страницы заказа на главную Яндекса')
     def test_redirect_to_yandex_page_user_redirected(self, driver):
         main_page = MainPage(driver)
         order_page = OrderPage(driver)
